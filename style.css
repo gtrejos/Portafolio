@@ -1,0 +1,202 @@
+:root {
+    --purple: #8A2BE2;
+    --black: #000000;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, var(--black) 0%, var(--purple) 100%);
+    background-attachment: fixed;
+    color: white;
+    min-height: 100vh;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    color: var(--purple);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.social-links a {
+    color: white;
+    margin-left: 1.5rem;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--purple);
+}
+
+.section {
+    margin: 6rem 0 3rem 0;
+}
+
+h2 {
+    color: var(--white);
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.btn, .ver-mas {
+    background-color: var(--purple);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btn:hover, .ver-mas:hover {
+    background-color: #1dac81;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--purple);
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.project-image {
+    background-color: rgba(51, 51, 51, 0.7);
+    height: 200px;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.whatsapp-btn {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .section {
+        margin: 4rem 0 2rem 0;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.languages-section {
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.languages-timeline {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+    position: relative;
+}
+
+.language-item {
+    background: rgba(17, 17, 17, 0.7);
+    padding: 1.5rem;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.language-item:hover {
+    transform: translateY(-10px);
+}
+
+.language-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .languages-timeline {
+        grid-template-columns: 1fr;
+    }
+    
+    .languages-timeline::before {
+        display: none;
+    }
+}
+
